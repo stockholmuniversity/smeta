@@ -13,7 +13,7 @@
 > * a smudge.
 
 A meta relationship API and web UI for creating relationships between different services, e.g. your
-companys Single-Signon and your Github account. This is the data/relationships that noone wants to
+companys Single sign-on and your Github account. This is the data/relationships that noone wants to
 do but everyone needs to know about in this BYO world.
 
 # Plugins
