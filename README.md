@@ -21,3 +21,18 @@ do but everyone needs to know about in this BYO world.
 There are two different kinds of plugins:
 * `authenticators` which authenticate a user which you can add tokens to for verification.
 * `verifiers` verifies with certainty that a user holds the token that the user provides.
+
+## authenticators
+Authenticators authenticate your users to smeta and then the user can add verified external accounts
+to their account.
+
+### SAML2
+Simple SAML2 Service Provider which requests attributes that map into:
+* username (primary key of the user)<br>
+  Probably `eduPersonPrincipalName` or `uid`.
+* mail (to be able to send reminders that the user should verify a token e.g.)
+
+### OIDC / OpenID Connect
+Simple OIDC Relying Party which requests claims to map into:
+* `preferred_username` (primary key of the user)
+* `email` (and probably `email_verified` as well)
