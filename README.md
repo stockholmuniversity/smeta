@@ -36,3 +36,26 @@ Simple SAML2 Service Provider which requests attributes that map into:
 Simple OIDC Relying Party which requests claims to map into:
 * `preferred_username` (primary key of the user)
 * `email` (and probably `email_verified` as well)
+
+## verifiers
+
+### email
+Might be strange since we already got an email from the authenticator, but this is an external or
+maybe a personal email. Gets verified by a secure, verification email with relative short timeout.
+
+### ssh-keys
+
+Upload your ssh-keys and then verify them by ssh:ing with that they into smeta with a unique
+username which we then can verify that the user holds the ssh-key.
+
+### pgpkeys
+
+FIXME
+
+### github
+
+FIXME
+
+### webauthn
+
+FIXME
