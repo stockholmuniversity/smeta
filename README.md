@@ -15,3 +15,9 @@
 A meta relationship API and web UI for creating relationships between different services, e.g. your
 companys Single-Signon and your Github account. This is the data/relationships that noone wants to
 do but everyone needs to know about in this BYO world.
+
+# Plugins
+
+There are two different kinds of plugins:
+* `authenticators` which authenticate a user which you can add tokens to for verification.
+* `verifiers` verifies with certainty that a user holds the token that the user provides.
