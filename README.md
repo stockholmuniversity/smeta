@@ -56,6 +56,6 @@ FIXME
 
 FIXME
 
-### webauthn
+### totp
 
 FIXME
