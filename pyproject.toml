@@ -1,0 +1,17 @@
+[project]
+name = "smeta"
+version = "0.1.0"
+description = "A meta relationship API and web UI for creating relationships between different services"
+authors = [
+    {name = "Simon Lundström",email = "simlu+github@su.se"}
+]
+license = "BSD-3-Clause"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
