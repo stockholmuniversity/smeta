@@ -160,6 +160,29 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-multipass"
+version = "0.11.2"
+description = "A pluggable solution for multi-backend authentication with Flask"
+optional = false
+python-versions = "~=3.10"
+groups = ["main"]
+files = [
+    {file = "flask_multipass-0.11.2-py3-none-any.whl", hash = "sha256:301dfdf3b42e661c0362ca6a610b799820cacda769d1f3e01f2f6d96507a14f1"},
+    {file = "flask_multipass-0.11.2.tar.gz", hash = "sha256:b45f5db4310df9bc56cda0a12cf8f4b35cb28d477ea853916d0e4927990d4048"},
+]
+
+[package.dependencies]
+blinker = "*"
+flask = "*"
+
+[package.extras]
+authlib = ["authlib (>=0.14.1)", "requests"]
+dev = ["pytest", "pytest-cov", "pytest-mock", "ruff"]
+ldap = ["flask-wtf", "python-ldap (>=3.3.1)"]
+saml = ["python3-saml (>=1.10.1)"]
+sqlalchemy = ["flask-wtf", "sqlalchemy"]
+
+[[package]]
 name = "importlib-metadata"
 version = "8.7.1"
 description = "Read metadata from Python packages"
@@ -733,4 +756,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "~=3.11"
-content-hash = "e7dcbae73ef72c24c4bdc800e8e25f99bc135e72f5edd267e54a0902aab4e1f7"
+content-hash = "62f6c4445cab2fbc6ef73a10ddd7d343ee3ea321d92adbc49f7ab50a1e2969c4"
