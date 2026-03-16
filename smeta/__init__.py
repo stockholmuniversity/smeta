@@ -1,6 +1,6 @@
 import logging.config
 
-from flask import Flask
+from flask import Flask, url_for
 from flask.logging import default_handler
 from flask_multipass import Multipass
 
@@ -33,6 +33,11 @@ def index():
 @app.route("/secure")
 def secure():
     return '<a href="/">/</a><hr>hello FIXME'
+
+
+@app.route("/logout")
+def logout():
+    return multipass.logout(url_for("index"), clear_session=True)
 
 
 @multipass.identity_handler
