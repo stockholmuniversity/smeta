@@ -5,7 +5,13 @@
     <title>Hello World!</title>
   </head>
   <body>
-lol login
+lol login:
+<ul>
+  {% for provider in config["MULTIPASS_AUTH_PROVIDERS"] %}
+    <li><a href="/login/{{provider}}">{{provider.title()}}</a></li>
+  {% endfor %}
+</ul>
+<hr>
 <pre>
 <code>
 g={{ g }}
