@@ -27,7 +27,7 @@ multipass = Multipass(app)
 
 @app.route("/")
 def index():
-    return '<a href="/secure">/secure</a>'
+    return '<a href="/secure">/secure</a> - <a href="/login">/login</a>'
 
 
 @app.route("/secure")
