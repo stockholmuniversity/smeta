@@ -2,6 +2,7 @@ import logging.config
 
 from flask import Flask
 from flask.logging import default_handler
+from flask_multipass import Multipass
 
 app = Flask(__name__)
 
@@ -21,6 +22,8 @@ for logger in [
     logger.handlers = [default_handler]
     logger.disabled = False
 
+multipass = Multipass(app)
+
 
 @app.route("/")
 def index():
@@ -30,3 +33,8 @@ def index():
 @app.route("/secure")
 def secure():
     return '<a href="/">/</a><hr>hello FIXME'
+
+
+@multipass.identity_handler
+def identity_handler(identity_info):
+    app.logger.error("identity_info: %r", identity_info)
